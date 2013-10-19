@@ -38,43 +38,29 @@
             </button>
             <a class="navbar-brand" href="#">UO.me</a>
           </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
         </div>
       </div>
 
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header">
-          <h1>Have something you want to...</h1>
+          <h1>Receiving Money!</h1>
         </div>
-        <div class="row">
-          <div class="col-mid-4 start">
-          <div class="btn-group">
-          <button class="btn btn-success btn-lg dropdown-toggle start" type="button" data-toggle="dropdown">
-          Sell?
-         </button>
+
+
+        <form action="screen3.html" method="POST">
+          <div class="form-group">
+            <label for="seller-amount-requested">Amount requested ($)</label>
+            <input type="text" class="form-control" id="seller-amount-requested" placeholder="Enter amount of money you want to request">
           </div>
+          <div class="form-group">
+            <label for="seller-stripe-username-input">Stripe Username</label>
+            <input type="text" class="form-control" id="seller-stripe-username-input" placeholder="Enter your Stripe username">
           </div>
-        </div>
-        </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>        
+
+      </div>
     </div>
 
 
