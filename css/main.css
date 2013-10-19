@@ -103,9 +103,16 @@ textarea {
 
 .page-header > h1 {
     font-size: 3em;
+    text-align: center;
 }
 
+.start {
+    font-size: 5em;
+}
 
+.row.buying {
+    margin-top: 200em;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
