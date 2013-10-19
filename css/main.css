@@ -123,6 +123,14 @@ textarea {
     text-align: center;
 }
 
+.mid-col-12 .jumbotron {
+    margin-top: 100px;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-align: center;
+}
+
 
 /* ==========================================================================
    Helper classes
