@@ -96,18 +96,26 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#screen1 {
+    background-color: #3498DB;
+}
 
 .page-header {
     margin-top: 10em;
 }
 
 .page-header > h1 {
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 4px #000;
+    margin-top: 20px;
 }
 
 .start {
-    font-size: 4em;
+    margin-top: .5em;
+    font-size: 3em;
     text-align: center;
 }
 
