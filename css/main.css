@@ -107,12 +107,19 @@ textarea {
 }
 
 .start {
-    font-size: 5em;
+    font-size: 4em;
+    text-align: center;
 }
 
-.row.buying {
-    margin-top: 200em;
+.buy {
+    padding-top: 12em;
 }
+
+.col-md-3 .btn-success {
+    padding-left: 20px;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
