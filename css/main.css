@@ -119,6 +119,10 @@ textarea {
     padding-left: 20px;
 }
 
+.center {
+    margin: 0 auto;
+}
+
 
 /* ==========================================================================
    Helper classes
