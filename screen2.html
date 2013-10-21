@@ -16,7 +16,11 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
+<<<<<<< HEAD
     <body id="screen2">
+=======
+    <body id="screen3">
+>>>>>>> I accidentally the whole website
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -25,61 +29,73 @@
         <!-- Start of Application -->
 
        <!-- Wrap all page content here -->
-    <div id="wrap">
+      <div id="wrap">
 
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">UO.me</a>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">UO.me</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Begin page content -->
-      <div class="container">
-        <div class="page-header">
-          <h1>Receiving Money!</h1>
+        <!-- Content that only the seller sees -->
+        <div class="container seller-visible">
+          <div class="page-header">
+            <h1>Please beam this screen over to the person sending you money!</h1>
+          </div>
         </div>
 
+        <!-- Content that only the buyer sees -->
+        <div class="container buyer-visible">
+          <div class="page-header">
+            
+            <form action="" role="form" method="POST" id="payment-form">
+              <div class="form-group">
+                <label for="buyer-amount">Amount</label>
+                <input type="number" class="form-control" id="buyer-amount" placeholder="Enter in USD" data-stripe="number"/>
+                
+              </div>
+            </form>
 
-        <form action="screen3.html" method="get">
-          <div class="form-group">
-            <label for="seller-amount-requested">Amount requested ($)</label>
-            <input type="text" class="form-control" id="seller-amount-requested" placeholder="Enter amount of money you want to request">
+            <!-- Preconfigured Stripe Credit Card Form -->
+            <form action="" method="POST">
+              <script
+                src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" id="stripe-checkout"
+                data-key="pk_test_b2mZ1iTSY0mrSJMkpFK7qGB0"
+                data-amount="1000"
+                data-name="Demo Site"
+                data-description="Demo Payment"
+                data-image="/128x128.png">
+              </script>
+            </form>
+            <!-- Preconfigured Stripe Credit Card Form -->
           </div>
-          <div class="form-group">
-            <label for="seller-stripe-username-input">Stripe Username</label>
-            <input type="text" class="form-control" id="seller-stripe-username-input" placeholder="Enter your Stripe username">
-          </div>
-          <button type="submit" value="Submit" class="btn btn-default">Submit</button>
-        </form>        
-
-      </div>
+        </div>
     </div>
 
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/cookie.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/cookie.js"></script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='//www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
+      </script>
     </body>
 </html>

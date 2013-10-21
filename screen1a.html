@@ -16,7 +16,11 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body id="screen1">
+<<<<<<< HEAD:screen3.html
+    <body id="screen3">
+=======
+    <body id="screen2">
+>>>>>>> I accidentally the whole website:screen1a.html
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -31,6 +35,11 @@
       <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#">UO.me</a>
           </div>
         </div>
@@ -39,18 +48,11 @@
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header">
-          <h1>Have something you want to...</h1>
+          <h1>Hit next!</h1>
+          <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_2mciagM6Z5YM4VTq0UtlhxhIeflwmuZU&scope=read_write" class="button btn btn-primary btn-lg" type="button">Next</a>
+
         </div>
-        <div class="row">
-          <div class="col-mid-4 start">
-          <div class="btn-group">
-          <a href="screen1a.html" class="btn btn-success btn-lg dropdown-toggle start" type="button">
-           Sell?
-          </a>
-          </div>
-          </div>
-        </div>
-        </div>
+      </div>
     </div>
 
 
@@ -62,42 +64,8 @@
         <script src="js/main.js"></script>
         <script src="js/cookie.js"></script>
         <script>
-        function setCookie(c_name,value,exdays){
-           var exdate=new Date();
-           exdate.setDate(exdate.getDate() + exdays);
-           var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-           document.cookie=c_name + "=" + c_value;
-        }
-        
-        function getCookie(c_name){
-          var c_value = document.cookie;
-          var c_start = c_value.indexOf(" " + c_name + "=");
-          if (c_start == -1){
-            c_start = c_value.indexOf(c_name + "=");
-          }
-          if (c_start == -1){
-            c_value = null;
-          }
-          else{
-            c_start = c_value.indexOf("=", c_start) + 1;
-            var c_end = c_value.indexOf(";", c_start);
-            if (c_end == -1){
-            c_end = c_value.length;
-          }
-          c_value = unescape(c_value.substring(c_start,c_end));
-          }
-          return c_value;
-        }
-        function checkCookie(a){
-          var cook=getCookie("a");
-          if (cook!=null && cook!=""){
-            alert("Cookie" + cook + "Exists");
-          }
-          else{
-            alert("Cookie" + cook + "Does Not Exist")
-          }
-        }
-        $(document).ready(checkCookie(uo_cookie));</script>
+          $(document).ready(setCookie("uo_cookie",true,1));
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

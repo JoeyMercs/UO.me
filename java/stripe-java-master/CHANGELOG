@@ -1,0 +1,182 @@
+=== 1.5.1 2013-10-17
+
+* Added field transfer_enabled to Account API object
+  (thanks, kurguzov)
+
+=== 1.5.0 2013-10-01
+
+* Add support for metadata API
+
+=== 1.4.2 2013-09-18
+
+* Add support for closing disputes
+
+=== 1.4.1 2013-09-04
+
+* Fix return type of CustomerCardCollection.retrieve
+
+=== 1.4.0 2013-09-03
+
+* Tweak card create to align it with docs
+
+=== 1.3.2 2013-08-30
+
+* Add missing retrieve method to BalanceTransaction
+* Add missing fields to BalanceTransaction
+	- id
+	- fee
+	- feeDetails
+	- description
+* Add id field to Subscription
+
+=== 1.3.1 2013-08-21
+
+* Patch release with missing field, added tests
+
+=== 1.3.0 2013-08-19
+
+* Add BalanceTransaction API resource
+* Add Refund resource
+* Resource updates
+       - Remove `fee`, `feeDetails` from Transfer and Charge resources
+       - Add `balanceTransaction` to Transfer, Charge, and Dispute resources
+       - Add `refunds` to Charge resource
+
+=== 1.2.8 2013-08-12
+
+* Add support for unsetting attributes by updating with a null value.
+  Setting properties to a blank string is now an error.
+
+=== 1.2.7 2013-07-31
+
+* Enable createCard() to use a token
+
+=== 1.2.6 2013-07-30
+
+* Add 'createCard' to Customer
+* Update card collections bindings
+* Parse card objects when receiving customer.card.created events
+
+=== 1.2.5 2013-07-15
+
+* Add support for new cards API.
+  - You will probably need to upgrade the Stripe API version on your
+    account to 2013-07-05 or explicitly specify an API version with
+    com.stripe.Stripe.apiVersion when you switch to this release of
+    the bindings. More information about the relevant changes can be
+    found at https://stripe.com/docs/upgrades#2013-07-05 and
+    http://bit.ly/13miHM8
+* Add a StripeRawJsonObject type for deserializing webhook events we
+  don't recognize
+* Add a Money class for representing account balances in individual
+  currencies
+
+=== 1.2.4 2013-06-21
+
+* Add more Balance API resource, and add to deserializer.
+
+=== 1.2.3 2013-05-7
+
+* Rename BankAccount property `valid` to `validated`
+
+=== 1.2.2 2013-04-25
+* Add more objects to Deserializer
+
+=== 1.2.1 2013-04-20
+* Fix TransferTransaction fee retrieval
+
+=== 1.2.0 2013-04-11
+* Allow Transfers to be creatable
+* Add new Recipient resource
+
+=== 1.1.18 2013-03-19
+* Add support for charge capture.
+
+=== 1.1.17 2013-02-18
+* Add ability to deserialize account-related events.
+* Add user ID to Event object.
+
+=== 1.1.16 2013-02-15
+* Fix off-by-one error in deserializing events (github issue #27).
+
+=== 1.1.15 2013-02-01
+* List all checked exceptions throws by methods.
+* Add support for plan interval count.
+
+=== 1.1.14 2013-01-15
+* Add support for setting Stripe API version override.
+
+=== 1.1.13 2012-12-29
+* Add address_city to card
+* Upgrade Google GSON to 2.2.2
+
+=== 1.1.12 2012-12-24
+* Add option to provide custom URL handler
+
+=== 1.1.11 2012-11-17
+* Explict cast to javax.net.ssl.HttpsURLConnection to prevent issues with user imports
+
+=== 1.1.10 2012-11-15
+* Add currency to Invoice resource
+* Add amountOff and currency to Coupon resource
+
+=== 1.1.9 2012-11-08
+* Add new Dispute resource
+* Add support for updating charge disputes
+
+=== 1.1.8 2012-10-30
+* Add support for creating invoices
+* Add support for new Invoice.lines return format
+
+=== 1.1.7 2012-10-15
+* Add quantity to Subscription
+
+=== 1.1.6 2012-10-15
+
+* Add Fee API resource, add feeDetails to Charge API resource.
+
+=== 1.1.5 2012-09-26
+
+* Pass query parameters to DELETE-based methods when using Google App
+  Engine (github issue #17)
+
+=== 1.1.4 2012-08-31
+
+* Add update and pay methods for Invoice resource
+
+=== 1.1.3 2012-08-15
+
+* Add the Account API resource
+
+=== 1.1.2 2012-08-06
+
+* Allow specification of API key at the API call level.
+
+=== 1.1.1 2012-05-24
+
+* Use String.length() == 0 instead of String.isEmpty() for
+  compatibility with JDK 1.5 (needed for Android 2.2)
+
+=== 1.1.0 2012-05-16
+
+* Change type of cvcCheck, addressZipCheck, and addressLine1Check
+  attributes on com.stripe.model.Card. Values of those fields will be
+  "pass", "fail", "unchecked", or null (github issue #11)
+
+* Remove code and percentOff attributes from
+  com.stripe.model.Discount. Stripe never returned these values for
+  Discount objects, so they would previously always be null
+
+* Add missing fields to Charge, Coupon, Discount, Event, and Invoice
+  models (github issue #12)
+
+* Include parameters passed to any object's delete method in actual
+  API requests (github issue #10)
+
+* Add new deleteDiscount method to com.stripe.model.Customer
+
+* Switch from using HTTP Basic auth to Bearer auth. (Note: Stripe will
+  support Basic auth for the indefinite future, but recommends Bearer
+  auth when possible going forward)
+
+* Numerous test suite improvements
