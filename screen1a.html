@@ -16,11 +16,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-<<<<<<< HEAD:screen3.html
-    <body id="screen3">
-=======
     <body id="screen2">
->>>>>>> I accidentally the whole website:screen1a.html
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -48,8 +44,9 @@
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header">
-          <h1>Hit next!</h1>
-          <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_2mciagM6Z5YM4VTq0UtlhxhIeflwmuZU&scope=read_write" class="button btn btn-primary btn-lg" type="button">Next</a>
+          <h1>You will need a Stripe account to receive money!</h1>
+          <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_2mciagM6Z5YM4VTq0UtlhxhIeflwmuZU&stripe_landing=login&scope=read_write" class="btn btn-primary btn-lg dropdown-toggle start" type="button">I have a Stripe account</a>
+          <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_2mciagM6Z5YM4VTq0UtlhxhIeflwmuZU&stripe_landing=register&scope=read_write" class="btn btn-primary btn-lg dropdown-toggle start" type="button">I need to create a Stripe account</a>
 
         </div>
       </div>
